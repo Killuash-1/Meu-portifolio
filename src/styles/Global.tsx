@@ -61,6 +61,7 @@ export const colors = {
     grey5: {
       color: "$grey5",
     },
+    
     grey6: {
       color: "$grey6",
     },

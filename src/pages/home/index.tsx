@@ -26,10 +26,13 @@ import {
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
 } from "./style";
+import AboutMe from "@/components/Modal";
+
 
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
-  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+  const portfolioUrl = `https://github.com/${userData.githubUser}/Meu-portifolio`;
+
 
   return (
     <main id="home">
@@ -47,7 +50,7 @@ export const Home = (): JSX.Element => {
               <Text color="grey4">Olá meu nome é {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-            eu{" "}
+            E{" "}
               <Text as="span" type="heading1" color="brand1">
                 amo
               </Text>{" "}
@@ -65,8 +68,9 @@ export const Home = (): JSX.Element => {
                 Ver Projetos
               </Button>
               <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-              Veja o code-source do meu portfólio
+               Code-source
               </Button>
+              <AboutMe/>
               <Button
                 color="grey5"
                 as="a"
@@ -89,6 +93,8 @@ export const Home = (): JSX.Element => {
       <ProjectsArea id="projects">
         <Container>
           <ProjectAreaWrapperColumns>
+
+
             <ProjectsAreaSocialMediaMessage>
               <Text as="h2" type="heading4" color="grey4">
                 Meus Projetos
